@@ -24,6 +24,12 @@ def argmax(lst):
 
     N = len(lst)
 
+    if N == 0:
+        raise ValueError("Empty Lists are not supported")
+        #print ("Empty list passed")
+        #return 
+
+
     value_max = - np.inf
     imax = 0
 
@@ -36,7 +42,8 @@ def argmax(lst):
             value_max = value
     return imax
 
-values = [2, 3, -1, 7, 4]
+#values = [2, 3, -1, 7, 4]
+values = []
 
 i = argmax(values)
 print(f"Index of max value: {i}")
